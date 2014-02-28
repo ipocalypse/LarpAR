@@ -23,7 +23,6 @@
 		8654BBD718C06DE60033A312 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 8654BBD518C06DE60033A312 /* first.png */; };
 		86740E5218C06E16009A12A0 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86740E4D18C06E16009A12A0 /* Storyboard.storyboard */; };
 		86740E5318C06E16009A12A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86740E4E18C06E16009A12A0 /* main.m */; };
-		86740E5418C06E16009A12A0 /* LarpAR-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86740E5018C06E16009A12A0 /* LarpAR-Info.plist */; };
 		86740E5518C06E16009A12A0 /* App.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86740E5118C06E16009A12A0 /* App.strings */; };
 		86740E5C18C06E2E009A12A0 /* MyARViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 86740E5618C06E2E009A12A0 /* MyARViewController.mm */; };
 		86740E5D18C06E2E009A12A0 /* ConfigViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 86740E5818C06E2E009A12A0 /* ConfigViewController.mm */; };
@@ -274,8 +273,9 @@
 		993A8E28144FB14800414EB3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = doPanic;
+				ORGANIZATIONNAME = GrifCo;
 				TargetAttributes = {
 					993A8E30144FB14B00414EB3 = {
 						DevelopmentTeam = V59STHY4MZ;
@@ -311,7 +311,6 @@
 				8639459A18C06D44006EFA5F /* second@2x.png in Resources */,
 				86740E6B18C06F50009A12A0 /* InfoPlist.strings in Resources */,
 				9924CD83160B2B0000205D2E /* Default-Portrait@2x~ipad.png in Resources */,
-				86740E5418C06E16009A12A0 /* LarpAR-Info.plist in Resources */,
 				9924CD84160B2B0000205D2E /* Default-Portrait~ipad.png in Resources */,
 				9924CD85160B2B0000205D2E /* Default@2x~iphone.png in Resources */,
 				9924CD86160B2B0000205D2E /* Default~iphone.png in Resources */,
