@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8F1DC6EE-5A56-498F-883D-5C050AA5F8F3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LarpAR</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EE9B4457-4414-4C42-AEB7-8DE56B197FC5</key>
+		<string>https://github.com/ipocalypse/LarpAR.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LarpAR/LarpAR.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EE9B4457-4414-4C42-AEB7-8DE56B197FC5</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ipocalypse/LarpAR.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EE9B4457-4414-4C42-AEB7-8DE56B197FC5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EE9B4457-4414-4C42-AEB7-8DE56B197FC5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LarpAR</string>
+		</dict>
+	</array>
+</dict>
+</plist>
