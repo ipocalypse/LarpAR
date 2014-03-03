@@ -300,43 +300,43 @@ bool _areOptionsVisible = false;
     
     // first: setup a new poi label with title and description at the location you want
     // WARNING: use double-precision coordinates whenever possible (the following coordinates are from Google Maps which only provides 8-9 digit coordinates
-    newPoiLabel = [[poiLabelClass alloc] initWithTitle:@"Rome"
-                                        theDescription:@"Italy"
-                                            atLocation:[[CLLocation alloc] initWithLatitude:41.890156 longitude:12.492304]
-                   ];
+    // newPoiLabel = [[poiLabelClass alloc] initWithTitle:@"Rome"
+    //                                    theDescription:@"Italy"
+    //                                        atLocation:[[CLLocation alloc] initWithLatitude:41.890156 longitude:12.492304]
+    //               ];
     // second: add the poi label to the PARController using the addObject method
-	[[PARController sharedARController] addObject:newPoiLabel];
+	// [[PARController sharedARController] addObject:newPoiLabel];
     
     // add a second poi label and add it to he PARController
-    newPoiLabel = [[poiLabelClass alloc] initWithTitle:@"Berlin"
-                                        theDescription:@"Germany"
-                                            atLocation:[[CLLocation alloc] initWithLatitude:52.523402 longitude:13.41141]];
-    [[PARController sharedARController] addObject:newPoiLabel];
+    // newPoiLabel = [[poiLabelClass alloc] initWithTitle:@"Berlin"
+    //                                    theDescription:@"Germany"
+    //                                        atLocation:[[CLLocation alloc] initWithLatitude:52.523402 longitude:13.41141]];
+    // [[PARController sharedARController] addObject:newPoiLabel];
     
     // add a third poi label, this time allocation of a new marker and adding to the PARController are wrapped up in one line
     
-    [[PARController sharedARController] addObject:[[poiLabelClass alloc] initWithTitle:@"London"
-                                                                        theDescription:@"United Kingdom"
-                                                                            atLocation:[[CLLocation alloc] initWithLatitude:51.500141 longitude:-0.126257]
-                                                   ]];
+    //[[PARController sharedARController] addObject:[[poiLabelClass alloc] initWithTitle:@"London"
+    //                                                                    theDescription:@"United Kingdom"
+    //                                                                        atLocation:[[CLLocation alloc] initWithLatitude:51.500141 longitude:-0.126257]
+    //                                               ]];
     
     
     // now add a poi (a graphic only - no text)
-    PARPoi* newPoi = nil;
-	newPoi = [[PARPoi alloc] initWithImage:@"DefaultImage"
-                                atLocation:[[CLLocation alloc] initWithLatitude:51.500141 longitude:-0.126257]
+     PARPoi* newPoi = nil;
+	 newPoi = [[PARPoi alloc] initWithImage:@"graphics-monster-478299.gif"
+                                 atLocation:[[CLLocation alloc] initWithLatitude:51.500141 longitude:-0.126257]
               ];
-    newPoi.offset = CGPointMake(0, 0); // use this to move the poi relative to his final position on screen
-    [[PARController sharedARController] addObject:newPoi];
+     newPoi.offset = CGPointMake(0, 0); // use this to move the poi relative to his final position on screen
+     [[PARController sharedARController] addObject:newPoi];
     
     // Add another POI, near our Headquarters – display an image on it using a custom PoiLabelTemplate
-    newPoiLabel = [[poiLabelClass alloc] initWithTitle:@"Dom"
-                                        theDescription:@"Regensburger Dom"
-                                              theImage:[UIImage imageNamed:@"Icon@2x~ipad"]
-                                       fromTemplateXib:@"PoiLabelWithImage"
-                                            atLocation:[[CLLocation alloc] initWithLatitude:49.019512 longitude:12.097709]
-                   ];
-    [[PARController sharedARController] addObject:newPoiLabel];
+    // newPoiLabel = [[poiLabelClass alloc] initWithTitle:@"Troll"
+    //                                    theDescription:@"Level 2"
+    //                                          theImage:[UIImage imageNamed:@"graphics-monster-478299.gif"]
+    //                                   fromTemplateXib:@"PoiLabelWithImage"
+    //                                        atLocation:[[CLLocation alloc] initWithLatitude:49.019512 longitude:12.097709]
+    //              ];
+    // [[PARController sharedARController] addObject:newPoiLabel];
     
     NSLog(@"Number of PAR Objects in SharedController: %d", [[PARController sharedARController] numberOfObjects]);
     
