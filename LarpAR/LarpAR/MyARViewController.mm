@@ -12,7 +12,7 @@
 
 // Timer to regularly update GPS information
 static NSTimer *infoTimer = nil;
-bool _areOptionsVisible = false;
+bool _areOptionsVisible = true;
 
 @implementation MyARViewController
 
@@ -264,7 +264,7 @@ bool _areOptionsVisible = false;
 
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    NSLog(@"action sheet button clicked: %d", buttonIndex);
+    NSLog(@"action sheet button clicked: %ld", (long)buttonIndex);
     switch (buttonIndex) {
         case 0:
             // remove the Objects in the Controller
@@ -283,7 +283,7 @@ bool _areOptionsVisible = false;
         default:
             break;
     }
-    _areOptionsVisible = false;
+    _areOptionsVisible = true;
 }
 
 #pragma mark - PAR Stuff
@@ -293,9 +293,10 @@ bool _areOptionsVisible = false;
 - (void)createARPoiObjects {
     // first clear old objects
     [[PARController sharedARController] clearObjects];
+    [PARPoiFactory createAroundUser:50];
     
     // now create new ones
-    id newPoiLabel = nil;
+    // id newPoiLabel = nil;
     Class poiLabelClass = [PARPoiLabel class];
     
     // first: setup a new poi label with title and description at the location you want
@@ -315,25 +316,26 @@ bool _areOptionsVisible = false;
     
     // add a third poi label, this time allocation of a new marker and adding to the PARController are wrapped up in one line
     
-    //[[PARController sharedARController] addObject:[[poiLabelClass alloc] initWithTitle:@"London"
-    //                                                                    theDescription:@"United Kingdom"
-    //                                                                        atLocation:[[CLLocation alloc] initWithLatitude:51.500141 longitude:-0.126257]
-    //                                               ]];
+    [[PARController sharedARController] addObject:[[poiLabelClass alloc] initWithTitle:@"Troll"
+                                                                        theDescription:@"Level 1"
+                                                                        atLocation:[[CLLocation alloc]
+                                                                        initWithLatitude:51.500141 longitude:-0.126257]
+                                                   ]];
     
     
     // now add a poi (a graphic only - no text)
      PARPoi* newPoi = nil;
 	 newPoi = [[PARPoi alloc] initWithImage:@"graphics-monster-478299.gif"
                                  atLocation:[[CLLocation alloc] initWithLatitude:51.500141 longitude:-0.126257]
-              ];
+             ];
      newPoi.offset = CGPointMake(0, 0); // use this to move the poi relative to his final position on screen
      [[PARController sharedARController] addObject:newPoi];
     
     // Add another POI, near our Headquarters – display an image on it using a custom PoiLabelTemplate
     // newPoiLabel = [[poiLabelClass alloc] initWithTitle:@"Troll"
-    //                                    theDescription:@"Level 2"
-    //                                          theImage:[UIImage imageNamed:@"graphics-monster-478299.gif"]
-    //                                   fromTemplateXib:@"PoiLabelWithImage"
+    //                                     theDescription:@"Level 2"
+    //                                      theImage:[UIImage imageNamed:@"graphics-monster-478299.gif"]
+    //                                      fromTemplateXib:@"PoiLabelWithImage"
     //                                        atLocation:[[CLLocation alloc] initWithLatitude:49.019512 longitude:12.097709]
     //              ];
     // [[PARController sharedARController] addObject:newPoiLabel];
